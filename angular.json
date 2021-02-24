@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/sb-admin-2.min.css",
               "src/styles.css"
             ],
             "scripts": []
