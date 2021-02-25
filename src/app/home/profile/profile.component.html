@@ -1,0 +1,33 @@
+<div class="container">
+    <h3>Profile</h3>
+
+    <hr>
+
+    <h6> {{username}} </h6>
+    <h6> {{email}} </h6>
+    
+
+
+    <div class="row" *ngIf="! hasEmail">
+        <div class="col-sm-12">
+            <div class="alert alert-warning">
+                Please update your email.
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <form [formGroup]="emailUpdate" (ngSubmit)="saveEmail()">
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input formControlName="email" type="text" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-sm btn-block outline-btn btn-warning" [disabled]="! emailUpdate.valid" >UPDATE</button>
+                </div>
+                
+            </form>
+        </div>
+        
+    </div>
+
+
+</div>

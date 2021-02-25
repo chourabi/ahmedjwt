@@ -19,6 +19,8 @@ export class SigninComponent implements OnInit {
   constructor(private auth:AuthService, private router:Router) { }
 
   ngOnInit(): void {
+    console.log("i'm always on ");
+    
   }
 
   signIn(){

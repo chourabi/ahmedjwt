@@ -31,4 +31,19 @@ export class AuthService {
     };
     return this.http.get('http://localhost:8080/auth/info',httpOptions)
   }
+
+  update(data){
+    
+    const token = localStorage.getItem('tokenahmed');
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization': "Bearer "+token
+      })
+    };
+    return this.http.post('http://localhost:8080/auth/update',data,httpOptions)
+  }
+
+
+  
 }

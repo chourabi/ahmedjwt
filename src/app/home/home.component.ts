@@ -19,7 +19,13 @@ export class HomeComponent implements OnInit {
 
   getUserName(){
     this.auth.info().subscribe((data)=>{
-      console.log(data);
+      if (data== null) {
+        alert("session expired");
+      this.router.navigate(['/signin'])
+      }else{
+        console.log(data);
+        
+      }
       
     },(err)=>{
       alert("session expired");
